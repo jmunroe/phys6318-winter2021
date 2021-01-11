@@ -1,0 +1,11 @@
+name: phys6318
+channels:
+  - conda-forge
+dependencies:
+  - jupyterlab=3
+  - matplotlib
+  - netCDF4
+  - xarray
+  - xeus-python
+  - numba
+  - fortran-magic
