@@ -7,7 +7,7 @@ MODULE param
     REAL :: eta(0:ny + 1, 0:nx + 1), etan(0:ny + 1, 0:nx + 1)
     REAL :: u(0:ny + 1, 0:nx + 1), un(0:ny + 1, 0:nx + 1)
     REAL :: v(0:ny + 1, 0:nx + 1), vn(0:ny + 1, 0:nx + 1)
-    REAL :: x_eta(ny), y_eta(ny)
+    REAL :: x_eta(nx), y_eta(ny)
     REAL :: dt, dx, dy, g
     REAL :: eps ! parameter for Shapiro filter
 
