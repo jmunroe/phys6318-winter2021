@@ -99,4 +99,5 @@ PROGRAM topo
         WRITE (10, '(203F12.6)') (h1(j, k), k=0, nx + 1)
     END DO
 
+    CLOSE(10)
 END PROGRAM topo
