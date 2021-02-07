@@ -14,11 +14,11 @@ CONTAINS
         dt = 0.1
 
         DO k = 1, nx
-            x_eta(j) = dx/4. + REAL(k)*dx
+            x_eta(k) = dx/4. + REAL(k)*dx
         END DO
         
         DO j = 1, ny
-            y_eta(j) = dy/4. + REAL(j)*dx
+            y_eta(j) = dy/4. + REAL(j)*dy
         END DO
 
 ! physical parameters
