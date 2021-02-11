@@ -54,7 +54,8 @@ PROGRAM wind
     nout = INT(2.*3600./dt)
 
     ! create output file
-    outfile = "output.nc"
+    outfile = OUTPUT_FILE
+    !outfile = "output_2.nc"
     CALL create_nc(outfile)
 
     ! write out initial conditions

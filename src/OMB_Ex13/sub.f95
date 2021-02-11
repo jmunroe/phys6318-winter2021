@@ -1,6 +1,7 @@
 MODULE sub
     USE param
 
+    IMPLICIT NONE
 CONTAINS
 
 !=======================
@@ -81,6 +82,7 @@ CONTAINS
         REAL :: pgrdx, pgrdy, tx, ty
         REAL :: div, div1, div2
         REAL :: advx(0:ny + 1, 0:nx + 1), advy(0:ny + 1, 0:nx + 1)
+        REAL :: hu, hv
 
 ! calculate the nonlinear terms for u-momentum equation
         DO j = 0, ny + 1
@@ -100,7 +102,7 @@ CONTAINS
         END DO
         END DO
 
-        mode = 3
+        mode = MODE_DEF
         CALL advect
 
         DO j = 1, ny
@@ -130,7 +132,7 @@ CONTAINS
         END DO
         END DO
 
-        mode = 3
+        mode = MODE_DEF
         CALL advect
 
         DO j = 1, ny
@@ -218,7 +220,7 @@ CONTAINS
         END DO
         END DO
 
-        mode = 3
+        mode = MODE_DEF
         CALL advect
 
         DO j = 1, ny
