@@ -1,7 +1,7 @@
 FC=gfortran
-FFLAGS=-g  -O3
+FFLAGS=-g -O3 
 
-run.exe: main.o sub.o param.o io.o
+run: main.o sub.o param.o io.o
 	$(FC) $(FFLAGS) -o run.exe main.o sub.o param.o io.o -L$(CONDA_PREFIX)/lib -lnetcdff
 
 main.o: main.f95 param.o sub.o io.o
